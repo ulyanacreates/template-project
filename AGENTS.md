@@ -7,6 +7,8 @@
 # Commit rules
 Every commit must be strictly granular, touching one feature/fix/part of the codebase, so that on a revert, each commit can be reverted without crossfire influence on other 
 parts of the codebase. DO NOT run pushes => your role is branching and committing. Commit messages need to be brief and self-explainable. Check the results of the commit hooks git-lrc before deeming this commit done. 
+- LiveReview: run `lrc review --agent-mode` before committing — the non-interactive agent path that writes the attestation so the pre-commit hook lets `git commit` through. Plain `lrc review` opens an interactive TUI and hangs without a TTY.
+- Textfile-only, no-code-changes commits (docs/markdown-only): run `lrc review --skip` before the commit so no AI review runs on them.
 
 # Project Context
 ## Development Practices:
