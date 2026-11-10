@@ -5,8 +5,8 @@
 - **Self-explainable**: FORBIDDEN from writing long comments. Long comment necessary -> analyse how this method can be broken down into simpler/more logical and straightforward code and refactor.
 
 # Commit rules
-Every commit must be strictly granular, touching one feature/fix/part of the codebase, so that on a revert, each commit can be reverted without crossfire influence on other 
-parts of the codebase. DO NOT run pushes => your role is branching and committing. Commit messages need to be brief and self-explainable. Check the results of the commit hooks git-lrc before deeming this commit done. 
+Every commit must be strictly granular by a meaningful FEATURE/MODULE, touching one feature/fix/part of the codebase, so that on a revert, each commit can be reverted without crossfire influence on other 
+parts of the codebase. A one-line change in a doc != commit: only meaningful changes, fixes and features deserve a commit; until the core issue is fixed or user points to it, do not dare commit small changes. DO NOT run pushes => your role is branching and committing. Commit messages need to be brief and self-explainable. Check the results of the commit hooks git-lrc before deeming this commit done. 
 - LiveReview: run `lrc review --agent-mode` before committing — the non-interactive agent path that writes the attestation so the pre-commit hook lets `git commit` through. 
 - *Special case*: Docs/markdown-only no-code-changes commits: run `lrc review --skip` before the commit so no AI review runs on them.
 
